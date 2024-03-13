@@ -1,5 +1,11 @@
-#!/usr/bin/pytho3
+#!/usr/bin/python3
 def remove_char_at(str, n):
-    if n < 0:
-        return (str)
-    return (str[:n] + str[n+1:])
+    copy = ""
+
+    if n > -1 and n <= len(str) - 1:
+        for i in range(len(str)):
+            if i != n:
+                copy = copy + str[i]
+        return copy
+    else:
+        return str
